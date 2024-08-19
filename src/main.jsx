@@ -6,6 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import MainLayOut from './MainLayOut/MainLayOut';
 
 
 
@@ -13,7 +14,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!bye</div>,
+    element: <MainLayOut></MainLayOut>
   },
 ]);
 
