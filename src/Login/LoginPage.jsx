@@ -15,7 +15,8 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            toast.success('Successfully Logged In!')
+            toast.success('Successfully Logged In!');
+            navigate('/');
             
         } catch (err) {
             setError(err.message);
