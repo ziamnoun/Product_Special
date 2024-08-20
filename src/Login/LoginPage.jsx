@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 'firebase/auth';
-import { auth } from '../firebaseConfig'; // Import your Firebase configuration
+
 import { useNavigate } from 'react-router-dom';
+import auth from '../firebase.config';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -13,7 +14,7 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            navigate('/'); // Navigate to home page after login
+            navigate('/'); 
         } catch (err) {
             setError(err.message);
         }
@@ -23,7 +24,7 @@ const LoginPage = () => {
         const provider = new GoogleAuthProvider();
         try {
             await signInWithPopup(auth, provider);
-            navigate('/'); // Navigate to home page after login
+            navigate('/'); 
         } catch (err) {
             setError(err.message);
         }
