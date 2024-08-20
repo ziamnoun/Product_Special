@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 
 import { useNavigate } from 'react-router-dom';
 import auth from '../firebase.config';
+import toast, { Toaster } from 'react-hot-toast';
 
 const RegisterPage = () => {
     const [email, setEmail] = useState('');
@@ -20,9 +21,10 @@ const RegisterPage = () => {
 
         try {
             await createUserWithEmailAndPassword(auth,email,password);
-            navigate('/login');
+            toast.success('Successfully Registered!')
         } catch (err) {
             setError(err.message);
+            toast.error('Registered Failed!')
         }
     };
 
@@ -73,6 +75,10 @@ const RegisterPage = () => {
                     </button>
                 </form>
             </div>
+            <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
         </div>
     );
 };

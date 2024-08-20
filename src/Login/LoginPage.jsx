@@ -3,6 +3,7 @@ import { signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider } from 
 
 import { useNavigate } from 'react-router-dom';
 import auth from '../firebase.config';
+import toast, { Toaster } from 'react-hot-toast';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -14,9 +15,11 @@ const LoginPage = () => {
         e.preventDefault();
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            navigate('/'); 
+            toast.success('Successfully Logged In!')
+            
         } catch (err) {
             setError(err.message);
+            toast.error('Login Failed!')
         }
     };
 
@@ -73,6 +76,10 @@ const LoginPage = () => {
                     Login with Google
                 </button>
             </div>
+            <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
         </div>
     );
 };
