@@ -14,7 +14,13 @@ import MainLayOut from './MainLayOut/MainLayOut';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayOut></MainLayOut>
+    element: <MainLayOut></MainLayOut>,
+    children:[
+      {
+        path: "/",
+    element: <Home></Home>;
+      }
+    ]
   },
 ]);
 
