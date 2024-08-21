@@ -4,9 +4,9 @@ const ProductsPage = () => {
     const [products, setProducts] = useState([]);
     const [totalProducts, setTotalProducts] = useState(0);
     const [page, setPage] = useState(1);
-    const [limit] = useState(10); // Number of products per page
-    const [sort, setSort] = useState(''); // Sorting criteria
-    const [search, setSearch] = useState(''); // Search query
+    const [limit] = useState(10); 
+    const [sort, setSort] = useState(''); 
+    const [search, setSearch] = useState(''); 
 
     useEffect(() => {
         const fetchProducts = async () => {
@@ -26,8 +26,8 @@ const ProductsPage = () => {
     const totalPages = Math.ceil(totalProducts / limit);
 
     return (
-        <div className="p-4">
-            <h1 className="text-3xl font-bold mb-6">Products</h1>
+        <div className="p-4 mx-auto mt-5">
+            <h1 className="text-3xl font-bold mb-6 mx-auto mt-5">Products</h1>
 
             <div className="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <input
