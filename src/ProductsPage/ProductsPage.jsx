@@ -11,7 +11,7 @@ const ProductsPage = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/product?page=${page}&limit=${limit}&sort=${sort}&search=${search}`);
+                const response = await fetch(`https://product-item-server.vercel.app/product?page=${page}&limit=${limit}&sort=${sort}&search=${search}`);
                 const data = await response.json();
                 setProducts(data.products);
                 setTotalProducts(data.totalProducts);

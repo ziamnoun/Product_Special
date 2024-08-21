@@ -27,7 +27,7 @@ const Navbar = () => {
         <nav className="bg-white shadow-lg">
             <div className="container mx-auto px-4">
                 <div className="flex justify-between items-center py-4">
-                    {/* Navbar Start */}
+                   
                     <div className="flex items-center">
                         <div className="dropdown lg:hidden">
                             <button
@@ -55,11 +55,7 @@ const Navbar = () => {
                                         Home
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link to="/add-item" className="block text-gray-800 hover:text-blue-500">
-                                        Add Item
-                                    </Link>
-                                </li>
+                               
                             </ul>
                         </div>
                         <Link to="/" className="text-xl font-semibold text-gray-800 hover:text-blue-500">
@@ -75,11 +71,7 @@ const Navbar = () => {
                                     Home
                                 </Link>
                             </li>
-                            <li>
-                                <Link to="/add-item" className="text-gray-800 hover:text-blue-500">
-                                    Add Item
-                                </Link>
-                            </li>
+                          
                         </ul>
                     </div>
 
