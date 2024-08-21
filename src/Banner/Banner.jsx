@@ -2,7 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className="relative bg-cover bg-center h-[500px]" style={{ backgroundImage: 'url(https://via.placeholder.com/1920x1080)' }}>
+        <div className="relative bg-cover bg-center h-[500px] mx-4 md:mx-8  lg:mx-16" style={{ backgroundImage: 'url(https://img.freepik.com/premium-photo/photocomposition-horizontal-shopping-banner-with-woman-big-smartphone_23-2151201773.jpg)' }}>
             <div className="absolute inset-0 bg-black opacity-50"></div> 
 
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
